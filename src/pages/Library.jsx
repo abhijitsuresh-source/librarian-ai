@@ -14,7 +14,7 @@ export default function Library() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/api/analyses')
+    axios.get('https://librarian-ai.onrender.com/api/analyses')
       .then(r => setAnalyses(r.data.analyses || []))
       .finally(() => setLoading(false));
   }, []);

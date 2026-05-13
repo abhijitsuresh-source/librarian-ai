@@ -37,7 +37,7 @@ export default function Tool() {
     setError('');
     setLoading(true);
     try {
-      const { data } = await axios.post('/api/analyze', {
+      const { data } = await axios.post('https://librarian-ai.onrender.com/api/analyze', {
         transcript,
         meetingTitle: meetingTitle || 'Untitled Meeting',
         hostEmail

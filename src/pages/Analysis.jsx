@@ -14,7 +14,7 @@ export default function Analysis() {
   const [showTranscript, setShowTranscript] = useState(false);
 
   useEffect(() => {
-    axios.get(`/api/analyses/${id}`)
+    axios.get(`https://librarian-ai.onrender.com/api/analyses/${id}`)
       .then(r => setData(r.data))
       .catch(() => setError('Analysis not found.'))
       .finally(() => setLoading(false));

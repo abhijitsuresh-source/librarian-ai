@@ -25,7 +25,7 @@ export default function ThreadCard({ thread, analysisId, index, onUpdate }) {
   const updateStatus = async (newStatus) => {
     setSaving(true);
     try {
-      await axios.patch(`/api/analyses/${analysisId}/threads/${thread.id}`, { status: newStatus });
+      await axios.patch(`https://librarian-ai.onrender.com/api/analyses/${analysisId}/threads/${thread.id}`, { status: newStatus });
       setStatus(newStatus);
       onUpdate && onUpdate(thread.id, newStatus);
     } catch (e) {
